@@ -37,7 +37,8 @@
                         <tr>
                             <td><?= $no++; ?></td>
                             <td><?= $value['nama_kategori']; ?></td>
-                            <td><button class="btn btn-sm btn-warning" data-toggle="modal" data-target="#edit <?php $value['id_kategori'] ?>
+                            <td>
+                                <button class="btn btn-sm btn-warning" data-toggle="modal" data-target="#edit <?php $value['id_kategori'] ?>
                                     ">Edit</button>
                                 <a href="<?= base_url('kategori/delete_data/' . $value['id_kategori']) ?>"
                                     class="btn btn-sm btn-danger" onclick="return confirm('Yakin Hapus')">Hapus

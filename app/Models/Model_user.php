@@ -9,6 +9,7 @@ class Model_user extends Model
     public function all_data()
     {
         return $this->db->table('tbl_user')
+            ->join('tbl_dep', 'tbl_dep.id_dep = tbl_user.id_dep', 'left')
             ->orderBy('id_user', 'DESC')
             ->get()
             ->getResultArray();
