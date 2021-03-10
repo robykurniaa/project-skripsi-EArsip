@@ -31,14 +31,17 @@ class Filters extends BaseConfig
 	public $globals = [
 		'before' => [
 			'Filter_auth' => ['except' => [
-				'auth','auth/*'
+				'auth', 'auth/*'
 			]]
 			// 'honeypot',
 			// 'csrf',
 		],
 		'after'  => [
 			'Filter_auth' => ['except' => [
-				'home','home/*'
+				'home', 'home/*',
+				'kategori', 'kategori/*',
+				'dep', 'dep/*',
+				'user', 'user/*',
 			]],
 			'toolbar',
 			// 'honeypot',
