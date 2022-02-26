@@ -7,7 +7,8 @@
     <title>E - ARSIP | <?= $title ?> </title>
 
     <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="<?= base_url() ?>/template/plugins/fontawesome-free/css/all.min.css">
     <!-- icheck bootstrap -->
@@ -28,13 +29,13 @@
                 <?php
                 $errors = session()->getFlashdata('errors');
                 if (!empty($errors)) { ?>
-                    <div class="alert alert-danger alert-dismissible">
-                        <ul>
-                            <?php foreach ($errors as $key => $value) { ?>
-                                <li><?= esc($value) ?></li>
-                            <?php } ?>
-                        </ul>
-                    </div>
+                <div class="alert alert-danger alert-dismissible">
+                    <ul>
+                        <?php foreach ($errors as $key => $value) { ?>
+                        <li><?= esc($value) ?></li>
+                        <?php } ?>
+                    </ul>
+                </div>
                 <?php } ?>
                 <?php
                 if (session()->getFlashdata('pesan')) {

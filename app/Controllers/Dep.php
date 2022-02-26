@@ -24,7 +24,7 @@ class dep extends BaseController
 
     public function add()
     {
-        $data = array('nama_dep' => $this->request->getPost());
+        $data = array('nama_dep' => $this->request->getPost('nama_dep'));
         $this->Model_dep->add($data);
         session()->setFlashdata('pesan', 'Data Berhasil Ditambahkan');
         return redirect()->to(base_url('dep'));
@@ -34,7 +34,7 @@ class dep extends BaseController
     {
         $data = array(
             'id_dep' => $id_dep,
-            'nama_dep' => $this->request->getPost()
+            'nama_dep' => $this->request->getPost('nama_dep')
         );
         $this->Model_dep->edit($data);
         session()->setFlashdata('pesan', 'Data Berhasil DiUpdate');

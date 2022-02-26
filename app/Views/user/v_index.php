@@ -2,13 +2,11 @@
     <div class="col-md-12">
         <div class="card card-primary card-solid">
             <div class="card-header">
-                <h3 class="card-title">Data userri</h3>
+                <h3 class="card-title">Data User</h3>
 
                 <div class="card-tools">
-                    <button type="button" class="btn btn-primary btn-sm btn-flat" data-toggle="modal"
-                        data-target="#Add">
-                        <i class="fas fa-plus"> Add</i>
-                    </button>
+                    <a href="<?= base_url('user/add') ?>" class="btn btn-primary btn-sm btn-flat">
+                        <i class="fas fa-plus"> Add</i></a>
                 </div>
                 <!-- /.card-tools -->
             </div>
@@ -26,7 +24,7 @@
                 <table id="example1" class="table table-bordered table-striped">
                     <thead>
                         <tr>
-                            <th width="80px ">No</th>
+                            <th width="30px ">No</th>
                             <th>Nama User</th>
                             <th>Email</th>
                             <th>Password</th>
@@ -51,7 +49,7 @@
                                     } ?> </td>
                             <td><img src="<?= base_url('foto/' . $value['foto']) ?>" width="80px"></td>
                             <td><?= $value['nama_dep']; ?></td>
-                            <td>
+                            <td style="display: inline;">
                                 <a href="" class="btn btn-sm btn-warning">Edit</a>
                                 <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Yakin Hapus')">Hapus
                             </td>
